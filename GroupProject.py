@@ -33,29 +33,6 @@ df2.describe()
 #display statistical information about third dataset
 df3.describe()
 
-# Select only numeric columns
-numeric_columns = df1.select_dtypes(include=[np.number]).columns
-numeric_df = df1[numeric_columns]
-
-# Compute correlation matrix
-correlation_matrix = numeric_df.corr()
-
-# Plot the correlation heatmap
-sns.heatmap(correlation_matrix, annot=True, linewidths=.5, fmt='.1f')
-
-
-f,ax = plt.subplots(figsize=(10, 10))
-sns.heatmap(df1.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)
-plt.show()
-
-f,ax = plt.subplots(figsize=(10, 10))
-sns.heatmap(df2.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)
-plt.show()
-
-f,ax = plt.subplots(figsize=(10, 10))
-sns.heatmap(df3.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)
-plt.show()
-
 # Filter out the "children" and "never_worked" categories from the 'work_type' attribute
 filtered_data = df1[(df1['work_type'] != 'children') & (df1['work_type'] != 'Never_worked')]
 
