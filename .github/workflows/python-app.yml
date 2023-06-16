@@ -23,4 +23,5 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Streamlit app
-      run: streamlit run --server.port ${{ github.event.client_payload.port }} GroupProject.py
+      run: streamlit run --server.port 8501 GroupProject.py
+
