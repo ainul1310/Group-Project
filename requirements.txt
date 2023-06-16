@@ -2,4 +2,3 @@ streamlit
 matplotlib
 seaborn
 plotly
-numpy as np
