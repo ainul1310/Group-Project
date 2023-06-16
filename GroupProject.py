@@ -5,6 +5,7 @@ import plotly.offline as py
 import plotly.graph_objs as go
 import plotly.express as px
 import streamlit as st
+import numpy as np
 
 color = sns.color_palette()
 plt.rcParams['figure.figsize'] = [10, 5]
