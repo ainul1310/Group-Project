@@ -49,6 +49,13 @@ grouped_data = grouped_data.loc[sorted_data.index]
 colors = ['#FC7676', '#722F37']
 
 fig1 = go.Figure(data=[go.Bar(x=grouped_data.index, y=grouped_data[col], name=col, color=colors) for col in grouped_data.columns])
+for i, col in enumerate(grouped_data.columns):
+    fig1.add_trace(go.Bar(
+        x=grouped_data.index,
+        y=grouped_data[col],
+        name=col,
+        marker_color=colors[i % len(colors)]  # Set the color for each cluster
+    ))
 fig1.update_layout(
     title={
         'text': 'Which Residence Type has the Most Stroke Cases by Work Type?',
