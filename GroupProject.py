@@ -46,7 +46,7 @@ sorted_data = grouped_data.sum(axis=1).sort_values(ascending=False)
 grouped_data = grouped_data.loc[sorted_data.index]
 
 # Define the colors for the chart
-colors = ['cyan', 'blue']
+colors = ['#FC7676', '#722F37']
 
 fig1 = go.Figure(data=[go.Bar(x=grouped_data.index, y=grouped_data[col], name=col) for col in grouped_data.columns])
 fig1.update_layout(
