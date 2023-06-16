@@ -5,8 +5,6 @@ import plotly.offline as py
 import plotly.graph_objs as go
 import plotly.express as px
 import streamlit as st
-import subprocess
-
 
 color = sns.color_palette()
 plt.rcParams['figure.figsize'] = [10, 5]
@@ -33,6 +31,17 @@ df2.describe()
 
 #display statistical information about third dataset
 df3.describe()
+
+# Drop non-numeric columns
+numeric_columns = df1.select_dtypes(include=[np.number]).columns
+numeric_df = df1[numeric_columns]
+
+# Compute correlation matrix
+correlation_matrix = numeric_df.corr()
+
+# Plot the correlation heatmap
+sns.heatmap(correlation_matrix, annot=True, linewidths=.5, fmt='.1f')
+
 
 f,ax = plt.subplots(figsize=(10, 10))
 sns.heatmap(df1.corr(), annot=True, linewidths=.5, fmt= '.1f',ax=ax)
