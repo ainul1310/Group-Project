@@ -33,7 +33,7 @@ df2.describe()
 #display statistical information about third dataset
 df3.describe()
 
-# Drop non-numeric columns
+# Select only numeric columns
 numeric_columns = df1.select_dtypes(include=[np.number]).columns
 numeric_df = df1[numeric_columns]
 
