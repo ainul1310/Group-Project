@@ -274,14 +274,3 @@ elif dashboard_selection == 'Health Metrics and Lifestyle Analysis':
     dashboard2()
 elif dashboard_selection == 'Stroke Analysis by Geographic Distribution':
     dashboard3()
-
-# Get the port number from Streamlit
-port = st.server.port
-
-# Check if running locally or on Streamlit Sharing
-if 'streamlit.io' not in st.__version__:
-    # Run ngrok to expose the app
-    ngrok_url = get_ngrok_url(st.server.port)
-    
-    # Display the ngrok URL
-    st.info(f"Public URL: {ngrok_url}")
