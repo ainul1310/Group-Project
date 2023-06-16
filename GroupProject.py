@@ -11,7 +11,6 @@ import subprocess
 color = sns.color_palette()
 plt.rcParams['figure.figsize'] = [10, 5]
 plt.rcParams['figure.dpi'] = 100
-py.init_notebook_mode(connected=True)
 
 # Read the CSV file into a DataFrame
 df1 = pd.read_csv('healthcare-dataset-stroke-data.csv')
