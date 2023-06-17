@@ -461,6 +461,7 @@ def dashboard3():
         st.write("")
         st.write("")
         st.write("")
+        st.write("")
         st.plotly_chart(fig6)
     with col2:
         st.write("")
@@ -470,7 +471,8 @@ def dashboard3():
         st.markdown("<p style='font-size: 21px;text-align: justify;'>The surrounding area's bustling and congested environment generate stress and hence raise the probability of stroke.</p>", unsafe_allow_html=True)
         st.markdown("<p style='font-size: 21px;text-align: justify;'>The high cost of living in WP Kuala Lumpur adds to the financial load, magnifying stress levels among residents and likely contributing to the region's increased stroke incidence.</p>", unsafe_allow_html=True)
 
-    st.markdown("---")
+    # Add a line
+    st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 
     st.markdown(
         """
