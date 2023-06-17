@@ -449,6 +449,8 @@ def dashboard3():
     
     # Display the first figure and its description
     with col1:
+        st.write("")
+        st.write("")
         st.plotly_chart(fig1)
     with col2:
         st.markdown("")
