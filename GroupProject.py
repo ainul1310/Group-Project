@@ -441,7 +441,7 @@ def dashboard2():
        """, unsafe_allow_html=True)
 
        st.markdown(
-        """
+       """
        <div>
        <p style='font-size: 21px;text-align: justify;'>
        However, there is still some of the record that not consistent which may be due to a number of factors such as
