@@ -188,7 +188,11 @@ grouped_df = df2.groupby(['stress_level', 'gender']).size().reset_index(name='to
 fig4 = go.Figure()
 for gender in gender_order:
     filtered_df = grouped_df[grouped_df['gender'] == gender]
-    fig4.add_trace(go.Scatter(x=filtered_df['stress_level'], y=filtered_df['total'], name=gender))
+    if gender == 'Male':
+        color = '#722F37'  # Set color for male
+    elif gender == 'Female':
+        color = '#FC7676'  # Set color for female
+    fig4.add_trace(go.Scatter(x=filtered_df['stress_level'], y=filtered_df['total'], name=gender, line=dict(color=color)))
 
 fig4.update_layout(
     paper_bgcolor='#262730',  # Set the background color of the chart
@@ -212,7 +216,6 @@ fig4.update_layout(
 
 # Chart 5
 
-# Group the data by sugary_food and gender, and sum the exercise_frequency
 # Group the data by sugary_intake and gender, and calculate the mean of exercise_duration
 grouped_data = df2.groupby(['sugary_intake', 'gender'])['exercise_duration'].mean().unstack()
 
