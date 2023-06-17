@@ -477,7 +477,7 @@ def dashboard2():
        which can lead to increased strength and athletic performance. </p>
        </div>""", unsafe_allow_html=True)
 
-        st.markdown(
+       st.markdown(
        """
        <div>
        <p style='font-size: 21px;text-align: justify;'>
