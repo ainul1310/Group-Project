@@ -467,8 +467,6 @@ def dashboard3():
         st.write("")
         st.write("")
         st.write("")
-        st.write("")
-        st.write("")
         st.markdown("<p style='font-size: 21px;text-align: justify;'>WP Kuala Lumpur regularly has the greatest number of stroke cases per year when compared to other states.</p>", unsafe_allow_html=True)
         st.markdown("<p style='font-size: 21px;text-align: justify;'>The surrounding area's bustling and congested environment generate stress and hence raise the probability of stroke.</p>", unsafe_allow_html=True)
         st.markdown("<p style='font-size: 21px;text-align: justify;'>The high cost of living in WP Kuala Lumpur adds to the financial load, magnifying stress levels among residents and likely contributing to the region's increased stroke incidence.</p>", unsafe_allow_html=True)
